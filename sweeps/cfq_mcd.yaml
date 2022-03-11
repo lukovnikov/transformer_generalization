@@ -1,7 +1,7 @@
 program: main.py
 command:
   - ${env}
-  - python3
+  - python
   - ${program}
   - ${args}
 method: grid
@@ -15,14 +15,14 @@ parameters:
     value: cfq_trafo
   transformer.variant:
     values:
-      - relative
+#      - relative
       - noscale
-      - scaledinit
+#      - scaledinit
   cfq.split:
     values:
       - mcd1
-      - mcd2
-      - mcd3
+#      - mcd2
+#      - mcd3
   amp:
     value: 1
   lr:
@@ -32,7 +32,7 @@ parameters:
   lr_warmup:
     value: 4000
   batch_size:
-    value: 4096
+    value: 512
   sweep_id_for_grid_search:
     distribution: categorical
     values:
